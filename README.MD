@@ -1,5 +1,6 @@
 # Progress Tracker 
 
 ## Tracks the progress you have made on codeforces till now
-## giving the number of question solved, pie chart of topics solved
+It displays the number of questions that have been solved so far
+pie chart depicting the distribution of solved topics.
 ## Heat map
