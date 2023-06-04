@@ -5,3 +5,6 @@
     - Pie chart depicting the distribution of solved topics.
 - Heat map
     - Tracks question solved on that specific day.
+
+    ### Home Page
+    ![Screenshot](Img/Home.png)
