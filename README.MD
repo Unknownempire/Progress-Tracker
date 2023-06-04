@@ -7,4 +7,4 @@
     - Tracks question solved on that specific day.
 
     ### Home Page
-![Home page](Img/Home.png)
+![Home page](Img/home_page.png)
