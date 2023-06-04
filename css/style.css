@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
 html,body {
     margin : 0;
     padding: 0;
@@ -60,6 +62,7 @@ nav {
     align-items: center;
     /* filter :blur(16px); */
     box-shadow: -1px 3px 5px rgba(25, 24, 24, 0.432);
+    font-family: 'Ubuntu', sans-serif;
 }
 .nav-center {
   width: 90vw;
@@ -81,3 +84,15 @@ nav a {
   letter-spacing: var(--spacing);
   margin-right: 1rem;
 }
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social a.visited, .social a {
+    color:rgb(31, 31, 228);
+    text-decoration: none;
+}
+/* .social a {
+    text-decoration : none;
+} */
