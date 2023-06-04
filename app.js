@@ -8,6 +8,10 @@ app.get('/',function(req,res) {
     res.sendFile(html_path);
 });
 
+app.get('/index.html',function(req,res)  {
+    res.sendFile(html_path);
+})
+
 
 const css_path = path.join(__dirname,'css');
 const img_path = path.join(__dirname,'Img');
