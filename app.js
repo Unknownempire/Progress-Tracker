@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const favicon = require('serve-favicon');
 
 //start server
 const html_path = path.join(__dirname,'index.html');
@@ -11,6 +12,12 @@ app.get('/',function(req,res) {
 app.get('/index.html',function(req,res)  {
     res.sendFile(html_path);
 })
+// app.use(favicon(path.join(__dirname,'Img','progress.svg')));
+const faviconPath = __dirname + '/Img/progress.svg';
+
+
+// Use the serve-favicon middleware
+app.use(favicon(faviconPath));
 
 
 const css_path = path.join(__dirname,'css');
