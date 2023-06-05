@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 html,body {
     margin : 0;
@@ -88,6 +89,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Work Sans', sans-serif;
 }
 .social a.visited, .social a {
     color:rgb(31, 31, 228);
