@@ -18,6 +18,11 @@ body {
     background-color: #f5f5f5;
 }
 
+h4:hover{
+     transform: scale(1.2);
+     transition: transform 0.15s ease-in-out;
+}
+
 #btn {
     background-color: transparent;
     height: 50px;
@@ -39,14 +44,20 @@ body {
     background-color: #ffffff;
 }
 
+form {
+    width: 50%;
+}
 input{
     outline:none;
-    border-radius: 25px;
-    width:50%;
+    border-radius: 5px;
+    width:100%;
     border-top:none;
     border-left: none;
     border-right: none;
+    border-bottom-color: rgba(0, 0, 0, 0.287);
     background-color:rgba(255, 255, 255, 0.802);
+    font-size: 15px;
+
     
 }
 
@@ -94,7 +105,20 @@ footer {
 .social a.visited, .social a {
     color:rgb(31, 31, 228);
     text-decoration: none;
+transition: transform 0.3s ease-in-out;
 }
 /* .social a {
     text-decoration : none;
 } */
+li:hover {
+     transform: scale(1.2);
+     transition: transform 0.15s ease-in-out;
+}
+
+a:hover {
+  transform: skew(20deg);
+}
+.social:hover {
+    text-shadow: 0px  0px 1px rgb(234, 234, 243),
+                 0px 0px 2px  rgb(31, 31, 228);
+}
