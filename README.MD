@@ -8,3 +8,7 @@
 
     ### Home Page
 ![Home](Img/Screenshot.png)
+    
+  ### Bar Graph 
+  - Problems solved category wise
+  ![Bar Graph](Img/bar_graph.png) 
