@@ -2,6 +2,11 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const favicon = require('serve-favicon');
+// For creating chart----------------------
+const { JSDOM } = require('jsdom');
+const { document } = new JSDOM().window;
+const Chart = require('chart.js');
+//----------------------------------------
 
 
 const html_path = path.join(__dirname,'public','index.html');
@@ -20,6 +25,7 @@ app.get('/',function(req,res) {
 // app.get('/index.html',function(req,res)  {
 //     res.sendFile(html_path);
 // })
+
 
 app.listen(3000, () => {
     console.log('server is running');
