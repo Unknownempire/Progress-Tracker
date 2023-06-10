@@ -2,11 +2,6 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const favicon = require('serve-favicon');
-// For creating chart----------------------
-const { JSDOM } = require('jsdom');
-const { document } = new JSDOM().window;
-const Chart = require('chart.js');
-//----------------------------------------
 
 
 const html_path = path.join(__dirname,'public','index.html');
