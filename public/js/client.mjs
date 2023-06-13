@@ -1,4 +1,4 @@
-import { difficulty,barGraph,mySet } from "./chart.mjs";
+import { difficulty,barGraph,mySet,mySet_rating,Rate,barGraph_rating,barGraph_tags } from "./chart.mjs";
 const url = 'https://codeforces.com/api/'
 const search_handle = document.querySelector("#user_handle")
 
@@ -96,7 +96,7 @@ search_handle.addEventListener("keydown", function(event)  {
 
           // Process the list of solved problems
           tag.forEach(function(tags,index) {
-            console.log(`tags: ${tags}`);
+            console.log(`tags: ${tags[0]}`);
           });
           // solvedProblems.forEach(function(problems,index){
           //   console.log(`problems: ${problems}`);
@@ -110,38 +110,12 @@ search_handle.addEventListener("keydown", function(event)  {
           console.log('tags:', tag);
           console.log('Problems : ', solvedProblems);
          // making Bar graph--------------------------------------------------------------
-          barGraph() 
+          barGraph();
+          barGraph_rating();
+          barGraph_tags();
+
             //Traverse the solvedProblem array of objects;
 
-          // const difficulty = {};
-          // //Traverse the solvedProblem array of objects;
-          // for (let i = 0; i < solvedProblems.length; ++i) {
-          //   difficulty[solvedProblems[i]['index']] = 0;
-          // }
-          // for (let i = 0; i < solvedProblems.length; ++i) {
-          //   difficulty[solvedProblems[i]['index']]++
-          // }
-          // console.log("difficulty : ", difficulty);
-
-          // const ctx = document.getElementById('myChart').getContext('2d');
-
-          // const myChart = new Chart(ctx, {
-          //   type: 'bar',
-          //   data: {
-          //     labels: ['A', 'B', 'C', 'D', 'E', 'F'],
-          //     datasets: [
-          //       {
-          //         label: 'Index',
-          //         data: Object.values(difficulty),
-          //       },
-          //     ],
-          //   },
-          //   options: {
-          //     backgroundColor: 'blue',
-          //     borderWidth: 2,
-          //     borderColor: 'black'
-          //   }
-          // });
         } else {
           console.error('Error:', data.comment);
         }
