@@ -95,20 +95,20 @@ search_handle.addEventListener("keydown", function(event)  {
           }
 
           // Process the list of solved problems
-          tag.forEach(function(tags,index) {
-            console.log(`tags: ${tags[0]}`);
-          });
+          // tag.forEach(function(tags,index) {
+          //   console.log(`tags: ${tags[0]}`);
+          // });
           // solvedProblems.forEach(function(problems,index){
           //   console.log(`problems: ${problems}`);
           // });
           problem_solved.textContent += "Problems Solved : " + solvedProblems.length;
 
-          console.log(solvedProblems.length);
+          // console.log(solvedProblems.length);
           // console.log('Solved problems:', solvedProblems);
           //tags of solved problems
-          console.log(tag.length);
-          console.log('tags:', tag);
-          console.log('Problems : ', solvedProblems);
+          // console.log(tag.length);
+          // console.log('tags:', tag);
+          // console.log('Problems : ', solvedProblems);
          // making Bar graph--------------------------------------------------------------
           barGraph();
           barGraph_rating();
@@ -133,3 +133,6 @@ function styling() {
   user_info.style.borderRadius = "10px";
   user_info.style.boxShadow = "0px 1px 10px gray";
 };
+
+// Styling for each graph.
+// So that there div appears after they are fetched.

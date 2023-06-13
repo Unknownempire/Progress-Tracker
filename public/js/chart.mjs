@@ -130,6 +130,7 @@ const myChart_tags = new Chart(ctx, {
     },
     options: {
         chartOptions,
+        aspectRatio: 2.4,
         animationanimateScale : true,
         backgroundColor: ['rgb(255, 99, 132)',
             'rgb(54, 162, 235)',
