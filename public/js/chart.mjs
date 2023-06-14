@@ -34,6 +34,7 @@ const myChart = new Chart(ctx, {
         ],
     },
     options: {
+        aspectRatio: 3,
         backgroundColor: 'green',
         borderWidth: 2,
         borderColor: 'black',
@@ -78,6 +79,7 @@ const myChart_rating = new Chart(ctx, {
         ],
     },
     options: {
+        aspectRatio: 3,
         backgroundColor: 'blue',
         borderWidth: 2,
         borderColor: 'black',
@@ -209,7 +211,7 @@ const myChart_verdict = new Chart(ctx, {
             display : false // Hide the labels
         },
         chartOptions,
-        aspectRatio: 3,
+        aspectRatio: 4,
         animationanimateScale : true,
         backgroundColor: [
             'rgb(0, 255, 0)',       // 'OK' (Accepted): Green

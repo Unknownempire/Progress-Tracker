@@ -27,6 +27,8 @@ export let verdicts =[];
 export const inputValue = "";
 const pie_styling =  document.querySelector("#myChart_verdict");
 const doughnut_styling = document.querySelector("#myChart_tags");
+const chartContainer = document.querySelector(".chart-container");
+const charBar = document.querySelector('.bar');
 //------------------------------------------------------------
 
 search_handle.addEventListener("keydown", function(event)  {
@@ -114,6 +116,15 @@ search_handle.addEventListener("keydown", function(event)  {
             console.log(`verdict: ${problems}`);
           });
           problem_solved.textContent += "Problems Solved : " + solvedProblems.length;
+          chart_style();
+          bar_style();
+          // making canvas element dynamically----------------------
+
+          // createChartCanvas('myChart_verdict');
+          // createChartCanvas('myChart_tags');
+          // createChartCanvas('myChart');
+          // createChartCanvas('myChart_rating');
+          //------------------------------------------------
 
           // console.log(solvedProblems.length);
           // console.log('Solved problems:', solvedProblems);
@@ -142,18 +153,61 @@ search_handle.addEventListener("keydown", function(event)  {
 
 function styling() {
   // user_info.style.border = "1px groove black";
+  user_info.style.width = '50%';
+  user_info.style.minHeight = '200px';
+  user_info.style.marginBottom = '50px';
+  user_info.style.display = 'flex';
+  user_info.style.alignItems = 'center';
+  user_info.style.justifyContent = 'center';
+  user_info.style.flexDirection = 'column';
+  user_info.style.textAlign = 'center';
+  user_info.style.padding = '1%';
+  user_info.style.fontFamily = "'Work Sans', sans-serif";
   user_info.style.background = "white";
   user_info.style.borderRadius = "10px";
   user_info.style.boxShadow = "0px 1px 10px gray";
 
+
   pie_styling.style.background = "white";
   pie_styling.style.borderRadius = "10px";
-  pie_styling.style.boxShadow = "0px 1px 10px gray";
+  pie_styling.style.boxShadow = "-1px 4px 10px gray";
 
   doughnut_styling.style.background = "white";
   doughnut_styling.style.borderRadius = "10px";
-  doughnut_styling.style.boxShadow = "0px 1px 10px gray";
+  doughnut_styling.style.boxShadow = "-1px 4px 10px gray";
 };
+
+function chart_style() {
+   if (chartContainer) {
+    chartContainer.style.width = '90vw';
+    chartContainer.style.display = 'flex';
+    chartContainer.style.flexDirection = 'column';
+    chartContainer.style.alignItems = 'center';
+    chartContainer.style.justifyContent = 'center';
+  }
+}
+function bar_style() {
+  if (charBar) {
+    charBar.style.width = '90vw';
+    charBar.style.display = 'flex';
+    charBar.style.flexDirection = 'column';
+    charBar.style.alignItems = 'center';
+    charBar.style.justifyContent = 'center';
+  }
+}
+// function createChartCanvas(elementId) {
+//   var canvas = document.createElement('canvas');
+//   canvas.id = elementId;
+
+//   if (charBar) {
+//     charBar.appendChild(canvas);
+//   }
+// }
+
+// createChartCanvas('myChart_verdict');
+// createChartCanvas('myChart_tags');
+// createChartCanvas('myChart');
+// createChartCanvas('myChart_rating');
 
 // Styling for each graph.
 // So that there div appears after they are fetched.
