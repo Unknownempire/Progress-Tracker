@@ -1,4 +1,4 @@
-import { user_info,user_rank,user_rating,username,solvedProblems,tag,inputValue} from "./client.mjs";
+import { user_info,user_rank,user_rating,username,solvedProblems,tag,inputValue,verdicts} from "./client.mjs";
 //indexes bar graph
 export const difficulty = {};
 export const mySet = new Set();
@@ -129,8 +129,11 @@ const myChart_tags = new Chart(ctx, {
         ],
     },
     options: {
+        legend: {
+            display: false, // Hide the labels
+        },
         chartOptions,
-        aspectRatio: 2.4,
+        aspectRatio: 3,
         animationanimateScale : true,
         backgroundColor: ['rgb(255, 99, 132)',
             'rgb(54, 162, 235)',
@@ -158,3 +161,76 @@ const myChart_tags = new Chart(ctx, {
     }
 })
 };
+
+
+//Pie chart
+
+export const verdi= {};
+export const mySet_verdicts = new Set();
+
+export function piechart_verdict() {
+    //To destroy a chart;
+    // if (myChart) {
+    //     myChart.destroy();
+    // }
+//Traverse the solvedProblem array of objects;
+    verdicts.forEach(function (tags, index) {
+        verdi[tags] = 0;
+        mySet_verdicts.add(tags);
+    });
+
+    verdicts.forEach(function (tags, index) {
+        // console.log(`tags: ${tags[0]}`);
+        verdi[tags] += 1;
+    });
+
+console.log("verdicts : ", verdi);
+var chartOptions = {
+  cutout: 40 // Adjust this value to make the doughnut thinner
+};
+
+
+const ctx = document.getElementById('myChart_verdict').getContext('2d');
+
+const myChart_verdict = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: [...mySet_verdicts],
+        // labels: ['OK','WRONG_ANSWER','RUNTIME_ERROR','TIME_LIMIT_EXCEEDED','COMPILATION_ERROR','MEMORY_LIMIT_EXCEEDED','PRESENTATION_ERROR','IDLENESS_LIMIT_EXCEEDED',' SECURITY_VIOLATED','CRASHED','INPUT_PREPARATION_CRASHED','CHALLENGED',' SKIPPED','TESTING','REJECTED'],
+        datasets: [
+            {
+                label: 'verdicts',
+                data: Object.values(verdi),
+            },
+        ],
+    },
+    options: {
+        legend: {
+            display : false // Hide the labels
+        },
+        chartOptions,
+        aspectRatio: 3,
+        animationanimateScale : true,
+        backgroundColor: [
+            'rgb(0, 255, 0)',       // 'OK' (Accepted): Green
+            'rgb(255, 0, 0)',       // 'WRONG_ANSWER': Red
+            'rgb(128, 0, 128)',     // 'RUNTIME_ERROR': Purple
+            'rgb(255, 255, 0)',     // 'TIME_LIMIT_EXCEEDED': Yellow
+            'rgb(255, 165, 0)',     // 'COMPILATION_ERROR': Orange
+            'rgb(0, 0, 139)',       // 'MEMORY_LIMIT_EXCEEDED': Dark Blue
+            'rgb(255, 192, 203)',   // 'PRESENTATION_ERROR': Pink
+            'rgb(173, 216, 230)',   // 'IDLENESS_LIMIT_EXCEEDED': Light Blue
+            'rgb(139, 0, 0)',       // 'SECURITY_VIOLATED': Dark Red
+            'rgb(169, 169, 169)',   // 'CRASHED': Dark Gray
+            'rgb(165, 42, 42)',     // 'INPUT_PREPARATION_CRASHED': Brown
+            'rgb(128, 128, 0)',     // 'CHALLENGED': Olive
+            'rgb(211, 211, 211)',   // 'SKIPPED': Light Gray
+            'rgb(0, 255, 255)',     // 'TESTING': Cyan
+            'rgb(0, 100, 0)'],
+        borderWidth: 2,
+        borderColor: 'black',
+        hoverOffset: 4
+    }
+})
+};
+

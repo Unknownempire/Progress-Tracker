@@ -1,4 +1,4 @@
-import { difficulty,barGraph,mySet,mySet_rating,Rate,barGraph_rating,barGraph_tags } from "./chart.mjs";
+import { difficulty,barGraph,mySet,mySet_rating,Rate,barGraph_rating,barGraph_tags,piechart_verdict} from "./chart.mjs";
 const url = 'https://codeforces.com/api/'
 const search_handle = document.querySelector("#user_handle")
 
@@ -23,7 +23,10 @@ export const user_rating = document.querySelector(".user-rating");
 export const user_rank = document.querySelector(".user-rank");
 export let solvedProblems = [];
 export let tag = [];
+export let verdicts =[];
 export const inputValue = "";
+const pie_styling =  document.querySelector("#myChart_verdict");
+const doughnut_styling = document.querySelector("#myChart_tags");
 //------------------------------------------------------------
 
 search_handle.addEventListener("keydown", function(event)  {
@@ -78,6 +81,7 @@ search_handle.addEventListener("keydown", function(event)  {
           // const tag = [];
           solvedProblems = [];
           tag =[];
+          verdicts =[];
 
           // Iterate through each submission
           for (const submission of data.result) {
@@ -86,6 +90,7 @@ search_handle.addEventListener("keydown", function(event)  {
               // Extract the problem details
               const problem = submission.problem;
               const Tag = submission.problem.tags;
+              // const verd = submission.verdict;
               
 
               // Store the problem details in the solvedProblems array
@@ -93,14 +98,21 @@ search_handle.addEventListener("keydown", function(event)  {
               solvedProblems.push(problem);
             }
           }
+          for(const submission of data.result) {
+            const verd = submission.verdict;
+              verdicts.push(verd);
+          }
 
           // Process the list of solved problems
           // tag.forEach(function(tags,index) {
           //   console.log(`tags: ${tags[0]}`);
           // });
-          // solvedProblems.forEach(function(problems,index){
-          //   console.log(`problems: ${problems}`);
-          // });
+          solvedProblems.forEach(function(problems,index){
+            console.log(`problems: ${problems}`);
+          });
+          verdicts.forEach(function(problems,index){
+            console.log(`verdict: ${problems}`);
+          });
           problem_solved.textContent += "Problems Solved : " + solvedProblems.length;
 
           // console.log(solvedProblems.length);
@@ -113,6 +125,7 @@ search_handle.addEventListener("keydown", function(event)  {
           barGraph();
           barGraph_rating();
           barGraph_tags();
+          piechart_verdict();
 
             //Traverse the solvedProblem array of objects;
 
@@ -132,7 +145,16 @@ function styling() {
   user_info.style.background = "white";
   user_info.style.borderRadius = "10px";
   user_info.style.boxShadow = "0px 1px 10px gray";
+
+  pie_styling.style.background = "white";
+  pie_styling.style.borderRadius = "10px";
+  pie_styling.style.boxShadow = "0px 1px 10px gray";
+
+  doughnut_styling.style.background = "white";
+  doughnut_styling.style.borderRadius = "10px";
+  doughnut_styling.style.boxShadow = "0px 1px 10px gray";
 };
 
 // Styling for each graph.
 // So that there div appears after they are fetched.
+
