@@ -167,17 +167,18 @@ a:hover {
 .bar {
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     min-height: 500px;
     width: 70vw;
+    margin-top:10%;
 }
-.p-d {
+/* .p-d {
     width:70vw;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     display: flex;
     flex-direction: row;
     min-height: 50px;
-    margin: 10%;
-}
+    margin-top: 10%;
+} */
