@@ -12,3 +12,13 @@
   ### Bar Graph 
   - Problems solved category wise
   ![Bar Graph](Img/bar_graph.png) 
+  - Difficulty Rating of problems solved
+  ![Problem difficulty](Img/Rating.png)
+
+  ### Pie Chart
+  - Verdicts of the user
+  ![Pie Chart](Img/pieChart.png)
+
+  ### Doughnut Chart
+  - Category of problems solved
+  ![Doughnut Chart](Img/doughnut.png)
