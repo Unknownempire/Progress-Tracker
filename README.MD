@@ -11,7 +11,7 @@
     
   ### Bar Graph 
   - Problems solved category wise
-  ![Bar Graph](Img/bar_graph.png) 
+  ![Bar Graph](Img/barGraph.png) 
   - Difficulty Rating of problems solved
   ![Problem difficulty](Img/Rating.png)
 
