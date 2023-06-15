@@ -10,7 +10,7 @@
 
 # Codeforces API Usage
 - This project utilizes the Codeforces API to retrieve information about Codeforces contests, problems, and user submissions
-- For more information on the available Codeforces API endpoints and their parameters, refer to the [Codeforces API documentation][https://codeforces.com/apiHelp]
+- For more information on the available Codeforces API endpoints and their parameters, refer to the [Codeforces API documentation](https://codeforces.com/apiHelp)
     ### Home Page
 ![Home](Img/Screenshot.png)
     
