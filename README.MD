@@ -12,7 +12,7 @@
 - This project utilizes the Codeforces API to retrieve information about Codeforces contests, problems, and user submissions
 - For more information on the available Codeforces API endpoints and their parameters, refer to the [Codeforces API documentation](https://codeforces.com/apiHelp)
     ### Home Page
-![Home](Img/Screenshot.png)
+![Home](Img/Updated_homePage.png)
     
   ### Bar Graph 
   - Problems solved category wise
