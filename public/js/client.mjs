@@ -153,8 +153,8 @@ search_handle.addEventListener("keydown", function(event)  {
 
 function styling() {
   // user_info.style.border = "1px groove black";
-  user_info.style.width = '50%';
-  user_info.style.minHeight = '200px';
+  user_info.style.width = '25%';
+  user_info.style.minHeight = '110px';
   user_info.style.marginBottom = '50px';
   user_info.style.display = 'flex';
   user_info.style.alignItems = 'center';
